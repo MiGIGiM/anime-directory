@@ -1,0 +1,24 @@
+.flip {
+  width: 225px;
+  height: 335px;
+  perspective: 600px;  
+}
+.flipContent {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.4s;
+  transform-style: preserve-3d;
+}
+.flip:hover .flipContent {
+  transform: rotateY(180deg);
+  transition: transform 0.3s;
+}
+.flipFront, .flipBack {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+}
+.flipBack {
+  transform: rotateY(180deg);
+}
