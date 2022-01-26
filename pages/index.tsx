@@ -36,13 +36,12 @@ const Home: NextPage = () => {
                             leaveFrom="transform opacity-100 scale-100"
                             leaveTo="transform opacity-0 scale-95"
                         >
-                            <Menu.Items className="absolute right-0 z-50 text-sm font-sans w-56 flex flex-col justify-start space-y-3 p-3 mt-4 origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                            <Menu.Items className="absolute right-0 z-50 text-sm font-sans w-56 flex flex-col justify-start space-y-3 p-3 mt-4 origin-top-right bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                                 <Menu.Item>
                                     {({ active }) => (
                                         <button
                                             className={`${
-                                                active &&
-                                                'bg-blue-500 text-white font-semibold border-2 border-blue-700'
+                                                active && 'bg-blue-500 text-white font-semibold  '
                                             } rounded text-left p-3`}
                                         >
                                             Show All
@@ -53,8 +52,7 @@ const Home: NextPage = () => {
                                     {({ active }) => (
                                         <button
                                             className={`${
-                                                active &&
-                                                'bg-fuchsia-500 text-white font-semibold border-2 border-fuchsia-700'
+                                                active && 'bg-fuchsia-500 text-white font-semibold '
                                             } rounded text-left p-3`}
                                         >
                                             Show Movies
@@ -65,7 +63,7 @@ const Home: NextPage = () => {
                                     {({ active }) => (
                                         <button
                                             className={`${
-                                                active && 'bg-sky-500 text-white font-semibold border-2 border-sky-700'
+                                                active && 'bg-sky-500 text-white font-semibold '
                                             } rounded text-left p-3`}
                                         >
                                             Show TV
@@ -76,8 +74,7 @@ const Home: NextPage = () => {
                                     {({ active }) => (
                                         <button
                                             className={`${
-                                                active &&
-                                                'bg-rose-500 text-white font-semibold border-2 border-rose-700'
+                                                active && 'bg-rose-500 text-white font-semibold'
                                             } rounded text-left p-3`}
                                         >
                                             Sort by Popularity
@@ -89,15 +86,17 @@ const Home: NextPage = () => {
                     </Menu>
                 </div>
             </nav>
-            {status !== 'loaded' ? (
-                <Loader title="Loading" />
-            ) : (
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-y-5 justify-items-center mt-5">
-                    {animeList.map((anime: any) => (
-                        <Card key={anime.mal_id} anime={anime} />
-                    ))}
-                </div>
-            )}
+            <section>
+                {status !== 'loaded' ? (
+                    <Loader title="Loading" />
+                ) : (
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-y-5 justify-items-center mt-5">
+                        {animeList.map((anime: any) => (
+                            <Card key={anime.mal_id} anime={anime} />
+                        ))}
+                    </div>
+                )}
+            </section>
         </div>
     );
 };

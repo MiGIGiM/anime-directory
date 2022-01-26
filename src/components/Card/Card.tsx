@@ -21,7 +21,7 @@ const Card: FC<{ anime: Anime }> = ({ anime }) => {
             <a className={`${style.flip}  p-5 bg-gray-300 rounded-md shadow drop-shadow-lg shadow-black`}>
                 <div className={style.flipContent}>
                     <div className={style.flipFront}>
-                        <div className="w-full h-full relative">
+                        <div className="w-full h-full relative -z-10">
                             <Image
                                 src={anime.images.webp.image_url}
                                 alt={`${anime.title} Poster`}
