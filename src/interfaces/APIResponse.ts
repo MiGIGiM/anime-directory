@@ -1,7 +1,10 @@
 import { Anime } from './anime';
-import { Pagination } from './pagination';
+import { Links } from './links';
 
 export interface APIResponse {
     data: Anime[];
-    pagination: Pagination;
+    meta: {
+        count: number;
+    };
+    links: Links;
 }
