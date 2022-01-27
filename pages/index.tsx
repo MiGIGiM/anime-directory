@@ -1,7 +1,6 @@
 import type { NextPage } from 'next';
-import { Fragment, useState, useEffect } from 'react';
-import { AdjustmentsIcon, SearchIcon, RefreshIcon, PlusCircleIcon } from '@heroicons/react/outline';
-import { Menu, Transition } from '@headlessui/react';
+import { useState, useEffect } from 'react';
+import { SearchIcon } from '@heroicons/react/outline';
 import useAnimeList from '../src/hooks/useAnimeList';
 import Loader from '../src/components/Loader';
 import Card from '../src/components/Card';
