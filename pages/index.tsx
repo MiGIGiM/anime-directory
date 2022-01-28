@@ -1,10 +1,10 @@
 import type { NextPage } from 'next';
 import { useState, useEffect } from 'react';
 import { SearchIcon } from '@heroicons/react/outline';
+import Link from 'next/link';
 import useAnimeList from '../src/hooks/useAnimeList';
 import Loader from '../src/components/Loader';
 import Card from '../src/components/Card';
-import Link from 'next/link';
 
 const baseUrl = 'https://kitsu.io/api/edge/anime?page%5Blimit%5D=20&page%5Boffset%5D=0';
 
