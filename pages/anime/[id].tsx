@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import Image from 'next/image';
 import { Dialog, Transition } from '@headlessui/react';
 import { Fragment, useState } from 'react';
+import Loader from '../../src/components/Loader';
 import useAnime from '../../src/hooks/useAnime';
 
 const Anime: NextPage = () => {
@@ -32,7 +33,7 @@ const Anime: NextPage = () => {
     };
     return (
         <>
-            {status === 'loading' && <p>Loading...</p>}
+            {status === 'loading' && <Loader title="Loading..." />}
             {status === 'loaded' && (
                 <main>
                     <section className="relative block h-[500px]">
