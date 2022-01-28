@@ -51,10 +51,10 @@ const Anime: NextPage = () => {
                     <section className="relative py-16 bg-slate-300">
                         <div className="container mx-auto px-4">
                             <div className="relative flex flex-col min-w 0 break-words bg-white w-full mb-6 shadow-xl rounded-lg -mt-64">
-                                <div className="px-6">
+                                <div className="px-6 mt-0 md:mt-32 lg:mt-0">
                                     <div className="flex flex-wrap justify-center">
                                         <div className="w-full lg:w-3/12 px-4 lg:order-2 flex justify-center">
-                                            <div className="h-96 w-60 shadow-xl align-middle border-none absolute -top-60 md:-top-72 lg:-top-60">
+                                            <div className="h-96 w-60 shadow-xl align-middle border-none absolute -top-60 lg:-top-60">
                                                 <div className="relative h-full w-full">
                                                     <Image
                                                         src={
@@ -69,7 +69,7 @@ const Anime: NextPage = () => {
                                             </div>
                                         </div>
                                         <div className="w-full lg:w-4/12 px-4 lg:order-3 lg:text-right lg:self-center">
-                                            <div className="py-6 px-3 mt-32 sm:mt-0">
+                                            <div className="py-6 px-3 sm:mt-0">
                                                 <div className="flex justify-center py-4 lg:pt-4 pt-8">
                                                     <div className="mr-4 p-3 text-center">
                                                         <span
