@@ -10,7 +10,7 @@ const Card: FC<{ anime: Anime; id: string | number }> = ({ anime, id }) => (
             style={{ backgroundImage: `url(${anime.posterImage.original ?? anime.posterImage.medium})` }}
         >
             <div className="backdrop-brightness-95 backdrop-blur h-fit">
-                <h1 className="text-gray-100 font-mochiy text-xl text-center p-4 w-56">{anime.titles.en_jp}</h1>
+                <h1 className="text-gray-100 font-mochiy text-xl text-center p-4 w-56">{anime.canonicalTitle}</h1>
             </div>
         </a>
     </Link>
