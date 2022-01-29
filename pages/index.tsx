@@ -181,7 +181,7 @@ const Home: NextPage = () => {
                                             onClick={(e) => {
                                                 e.preventDefault();
                                                 sortAnime(
-                                                    'https://kitsu.io/api/edge/anime?sort=-popularityRank&page%5Blimit%5D=20&page%5Boffset%5D=0'
+                                                    'https://kitsu.io/api/edge/anime?sort=popularityRank&page%5Blimit%5D=20&page%5Boffset%5D=0'
                                                 );
                                             }}
                                         >
@@ -293,7 +293,7 @@ const Home: NextPage = () => {
                                             onClick={(e) => {
                                                 e.preventDefault();
                                                 sortAnime(
-                                                    'https://kitsu.io/api/edge/anime?sort=-popularityRank&page%5Blimit%5D=20&page%5Boffset%5D=0'
+                                                    'https://kitsu.io/api/edge/anime?sort=popularityRank&page%5Blimit%5D=20&page%5Boffset%5D=0'
                                                 );
                                             }}
                                         >
